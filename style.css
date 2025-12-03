@@ -81,16 +81,34 @@ body{
     cursor: pointer;
     
 }
+.list-item:before{
+    content: '';
+    width:4px;
+    height:50px ;
+    background-color: #fff;
+    position: absolute;
+    left:0;
+    bottom:1px;
+    align-self: flex-start;
+}
+.list-item:hover::before{
+    background-color: #0088ff;
+}
 .list-item{
     display: flex;
     align-items: center;
     padding:1.5em 2em 1.5em;
     gap:1.5em;
     border-bottom:1px solid #dbd2d2;
+    position: relative;
 }
 .list-item:last-child{
-    border-bottom: none;
+    border-bottom: none;   
 }
+.last-li svg:last-child{
+    margin-left: auto;
+}
+
 
 .list-item svg{
     color:gray;
